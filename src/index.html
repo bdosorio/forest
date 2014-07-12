@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html ng-app="forest" ng-controller="AppCtrl">
-  <head>
+<head>
     <title ng-bind="pageTitle"></title>
 
     <!-- social media tags -->
@@ -9,9 +9,9 @@
     <meta name="twitter:title" content="forest">
     <meta name="twitter:description" content="A forest simulator game based of /r/dailyprogramming.">
     <meta name="twitter:creator" content="@bdosorio">
-    <meta property="og:title" content="forest" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://forest.brianosorio.com" />
+    <meta property="og:title" content="forest"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://forest.brianosorio.com"/>
     <meta property="og:description" content="A forest simulator game based of /r/dailyprogramming.">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,69 +20,71 @@
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
     <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
-    <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
+    <link rel="stylesheet" type="text/css" href="<%= file %>"/>
+    <% }); %>
 
     <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
-    <script type="text/javascript" src="<%= file %>"></script><% }); %>
+    <script type="text/javascript" src="<%= file %>"></script>
+    <% }); %>
 
-  </head>
-  <body>
-    <div class="container">
-      <div class="navbar navbar-default">
+</head>
+<body>
+<div class="container">
+    <div class="navbar navbar-default">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" ng-init="menuCollapsed = true"
-            ng-click="menuCollapsed = ! menuCollapsed">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <div class="navbar-brand">
-            forest
-            <small>
-              <a href="http://github.com/bdosorio/forest/blob/v<%= version %>-release/CHANGELOG.md">
-                v<%= version %>
-              </a>
-            </small>
-          </div>
+            <button type="button" class="navbar-toggle" ng-init="menuCollapsed = true"
+                    ng-click="menuCollapsed = ! menuCollapsed">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-brand">
+                forest
+                <small>
+                    <a href="http://github.com/bdosorio/forest/blob/v<%= version %>-release/CHANGELOG.md">
+                        v<%= version %>
+                    </a>
+                </small>
+            </div>
         </div>
         <div class="collapse navbar-collapse" collapse="menuCollapsed">
-          <ul class="nav navbar-nav">
-            <li ui-sref-active="active">
-              <a href ui-sref="home">
-                <i class="fa fa-home"></i>
-                Home
-              </a>
-            </li>
-            <li ui-sref-active="active">
-              <a href ui-sref="about">
-                <i class="fa fa-info-circle"></i>
-                About?
-              </a>
-            </li>
-          </ul>
+            <ul class="nav navbar-nav">
+                <li ui-sref-active="active">
+                    <a href ui-sref="home">
+                        <i class="fa fa-home"></i>
+                        Home
+                    </a>
+                </li>
+                <li ui-sref-active="active">
+                    <a href ui-sref="about">
+                        <i class="fa fa-info-circle"></i>
+                        About?
+                    </a>
+                </li>
+            </ul>
         </div>
-      </div>
     </div>
+</div>
 
-    <div class="container" ui-view="main"></div>
+<div class="container" ui-view="main"></div>
 
-    <footer class="footer">
-      <div class="container">
+<footer class="footer">
+    <div class="container">
         <div class="footer-inner">
-          <p>
-            (c) 2014 <a href="http://www.brianosorio.com">Brian Osorio</a>.
-            <br />
-            forest is based on
-            <a href="http://github.com/ngbp/ngbp">NG-Boilerplate</a>,
-            <a href="http://www.angularjs.org">AngularJS</a>,
-            <a href="http://getbootstrap.com">Bootstrap</a>, 
-            <a href="http://angular-ui.github.com/bootstrap">UI Bootstrap</a>,
-            and 
-            <a href="http://fortawesome.github.com/Font-Awesome">Font Awesome</a>.        
-          </p>
+            <p>
+                (c) 2014 <a href="http://www.brianosorio.com">Brian Osorio</a>.
+                <br/>
+                forest is based on
+                <a href="http://github.com/ngbp/ngbp">NG-Boilerplate</a>,
+                <a href="http://www.angularjs.org">AngularJS</a>,
+                <a href="http://getbootstrap.com">Bootstrap</a>,
+                <a href="http://angular-ui.github.com/bootstrap">UI Bootstrap</a>,
+                and
+                <a href="http://fortawesome.github.com/Font-Awesome">Font Awesome</a>.
+            </p>
         </div>
-      </div>
-    </footer>
-  </body>
+    </div>
+</footer>
+</body>
 </html>
