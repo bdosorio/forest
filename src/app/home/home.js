@@ -21,6 +21,13 @@ angular.module('forest.home', [
         }
 
         $scope.game = new Game();
+
+        $scope.settings = {
+            boardHeight: 200,
+            boardWidth: 200,
+            drawRadius: 1,
+            strokeWidth: 1
+        };
     })
 
 ;

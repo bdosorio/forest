@@ -20,5 +20,16 @@ describe('home section', function () {
         expect($scope).toBeDefined();
         expect($scope.game).toBeDefined();
     });
+
+    it('should have a settings object on the scope', function(){
+        expect($scope.settings).toBeDefined();
+    });
+
+    it('should have the drawing settings in the settings object', function(){
+        expect($scope.settings.boardHeight).toBeDefined();
+        expect($scope.settings.boardWidth).toBeDefined();
+        expect($scope.settings.drawRadius).toBeDefined();
+        expect($scope.settings.strokeWidth).toBeDefined();
+    });
 });
 
