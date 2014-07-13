@@ -5,10 +5,20 @@
  * automatically.
  */
 describe('home section', function () {
+    var $scope, HomeCtrl;
+
     beforeEach(module('forest.home'));
 
-    it('should have a dummy test', inject(function () {
-        expect(true).toBeTruthy();
+
+
+    beforeEach(inject(function ($controller, $rootScope) {
+        $scope = $rootScope.$new();
+        HomeCtrl = $controller('HomeCtrl', { $scope: $scope });
     }));
+
+    it('should have a game object on the scope', function(){
+        expect($scope).toBeDefined();
+        expect($scope.game).toBeDefined();
+    });
 });
 

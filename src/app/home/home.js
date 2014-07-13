@@ -16,6 +16,11 @@ angular.module('forest.home', [
     })
 
     .controller('HomeCtrl', function HomeController($scope) {
+        function Game() {
+
+        }
+
+        $scope.game = new Game();
     })
 
 ;
