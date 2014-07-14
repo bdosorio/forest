@@ -18,19 +18,19 @@ angular.module('forest.home', [
     .controller('HomeCtrl', function HomeController($scope, ForestEngine) {
 
         $scope.forest = ForestEngine;
-        $scope.init = function(){
+        $scope.init = function () {
             $scope.forest.init($scope.settings.boardWidth);
         };
         $scope.settings = {
-            boardWidth : 10,
-            cellWidth : 20
+            boardWidth: 10,
+            cellWidth: 20
         };
-        $scope.getAgeColor = function(age){
+        $scope.getAgeColor = function (age) {
             var SAPLING_AGE = 12, ELDER_AGE = 120;
-            if(age < SAPLING_AGE){
+            if (age < SAPLING_AGE) {
                 return 255;
             }
-            if(age < ELDER_AGE){
+            if (age < ELDER_AGE) {
                 return 120;
             }
             return 60;
