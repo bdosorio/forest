@@ -1,5 +1,5 @@
 angular.module('forest.home', [
-    'ui.router'
+    'ui.router', 'forest.engine'
 ])
 
     .config(function config($stateProvider) {
@@ -15,18 +15,25 @@ angular.module('forest.home', [
         });
     })
 
-    .controller('HomeCtrl', function HomeController($scope) {
-        function Game() {
+    .controller('HomeCtrl', function HomeController($scope, ForestEngine) {
 
-        }
-
-        $scope.game = new Game();
-
+        $scope.forest = ForestEngine;
+        $scope.init = function(){
+            $scope.forest.init($scope.settings.boardWidth);
+        };
         $scope.settings = {
-            boardHeight: 200,
-            boardWidth: 200,
-            drawRadius: 1,
-            strokeWidth: 1
+            boardWidth : 10,
+            cellWidth : 20
+        };
+        $scope.getAgeColor = function(age){
+            var SAPLING_AGE = 12, ELDER_AGE = 120;
+            if(age < SAPLING_AGE){
+                return 255;
+            }
+            if(age < ELDER_AGE){
+                return 120;
+            }
+            return 60;
         };
     })
 
